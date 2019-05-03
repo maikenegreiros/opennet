@@ -1,0 +1,60 @@
+#app {
+  --green: #369831;
+  --red: #ca0b0f;
+  --yellow: yellow;
+  --dark: #484545;
+}
+
+.icognito-mode {
+  background-color: #343a40;
+}
+
+.form-container {
+  max-width: 600px;
+}
+
+.btnSwitchMode {
+  background-color: var(--green) !important;
+  color: white !important;
+  border-radius: 0 !important;
+}
+
+.forms-container {
+  background-color: rgba(54, 152, 49, 0.1);
+}
+
+.icognito-mode .forms-container {
+  background-color: initial;
+}
+
+.icognito-mode .btnSwitchMode {
+  background-color: var(--dark) !important;
+}
+
+.btnSwitchMode:focus {
+  box-shadow: none !important;
+}
+
+.btnSwitchMode::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  margin-left: 10px;
+  background-clip: content-box;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 50%;
+}
+.icognito-mode .btnSwitchMode::after {
+  padding: 2px;
+}
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(54, 152, 49, 0.4) !important;
+}
+
+input[type="submit"] {
+  color: #fff !important;
+  background-color: var(--green);
+}
