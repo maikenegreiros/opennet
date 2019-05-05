@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 import "./Ouvidoria.css";
+import DefaultForm from "./Form/DefaultForm";
+import IcognitoForm from "./Form/IcognitoForm";
 
 export default class Ouvidoria extends Component {
+  constructor() {
+    super();
+    this.state = {
+      apiUri: "http://localhost/opennet-api/",
+      icognitoMode: false
+    };
+  }
   render() {
     return (
       <div className="form-container w-100">
@@ -15,69 +24,24 @@ export default class Ouvidoria extends Component {
           <button
             className="btn btnSwitchMode"
             data-targets="form"
-            onClick={this.switchForm}
+            onClick={this.toggle.bind(this)}
           >
             Sugestão anônima
           </button>
           <div className="forms-container py-3">
-            <form className="form active">
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="Nome"
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  type="text"
-                  list="semester-list"
-                  placeholder="Semestre"
-                />
-                <datalist id="semester-list">
-                  <option value="1º Semestre" />
-                  <option value="2º Semestre" />
-                  <option value="3º Semestre" />
-                  <option value="4º Semestre" />
-                  <option value="5º Semestre" />
-                  <option value="6º Semestre" />
-                </datalist>
-              </div>
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  type="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div className="form-group">
-                <textarea className="form-control" placeholder="Sugestão..." />
-              </div>
-              <input type="submit" className="btn w-100" />
-            </form>
-            <form className="form d-none">
-              <div className="form-group">
-                <textarea className="form-control" placeholder="Sugestão..." />
-              </div>
-              <input type="submit" className="btn w-100" />
-            </form>
+            {!this.state.icognitoMode ? (
+              <DefaultForm apiUri={this.state.apiUri} />
+            ) : (
+              <IcognitoForm apiUri={this.state.apiUri} />
+            )}
           </div>
         </div>
       </div>
     );
   }
 
-  switchForm() {
-    console.log("click");
-    const switcher = document.querySelector(".btnSwitchMode");
-    const containers = document.querySelectorAll(
-      `.${switcher.dataset.targets}`
-    );
-
+  toggle() {
     document.body.classList.toggle("icognito-mode");
-    containers.forEach(container => {
-      container.classList.toggle("d-none");
-    });
+    this.setState({ icognitoMode: !this.state.icognitoMode });
   }
 }
