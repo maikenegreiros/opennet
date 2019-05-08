@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/opennet/static/css/main.568b1761.chunk.css",
-    "main.js": "/opennet/static/js/main.4c268ffb.chunk.js",
-    "main.js.map": "/opennet/static/js/main.4c268ffb.chunk.js.map",
+    "main.js": "/opennet/static/js/main.3cc14394.chunk.js",
+    "main.js.map": "/opennet/static/js/main.3cc14394.chunk.js.map",
     "runtime~main.js": "/opennet/static/js/runtime~main.5a1f7704.js",
     "runtime~main.js.map": "/opennet/static/js/runtime~main.5a1f7704.js.map",
     "static/css/2.22a7d4ef.chunk.css": "/opennet/static/css/2.22a7d4ef.chunk.css",
     "static/js/2.abd0d98f.chunk.js": "/opennet/static/js/2.abd0d98f.chunk.js",
     "static/js/2.abd0d98f.chunk.js.map": "/opennet/static/js/2.abd0d98f.chunk.js.map",
     "index.html": "/opennet/index.html",
-    "precache-manifest.064bf902935d8cdfd8dfe077581978a1.js": "/opennet/precache-manifest.064bf902935d8cdfd8dfe077581978a1.js",
+    "precache-manifest.2e74695c2d26461badd5acc5075a8b2d.js": "/opennet/precache-manifest.2e74695c2d26461badd5acc5075a8b2d.js",
     "service-worker.js": "/opennet/service-worker.js",
     "static/css/2.22a7d4ef.chunk.css.map": "/opennet/static/css/2.22a7d4ef.chunk.css.map",
     "static/css/main.568b1761.chunk.css.map": "/opennet/static/css/main.568b1761.chunk.css.map"
